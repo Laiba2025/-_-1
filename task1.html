@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>MY CALCULATOR</title>
+<link rel="stylesheet" type="text/css">
+<style>
+ body {
+     background-color:bisque;
+     text-align: center;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     font-size: medium;
+}
+</style>
+
+</head>
+<script>
+
+function cal(){
+
+var num1, sym, num2;
+num1 = document.getElementById("num1").value;
+sym =  document.getElementById("sym").value;
+num2 = document.getElementById("num2").value;
+   if (sym == "+") {
+      document.getElementById("rslt").value= num1 + num2;
+   }
+   
+    
+   else if(sym=="-"){
+   document.getElementById("rslt").value=num1-num2;
+}
+   else if(sym=="/"){
+    document.getElementById("rslt").value=num1/num2;                  
+   }
+    else if(sym=="*"){
+     document.getElementById("rslt").value=num1*num2;
+    }
+    else {
+        document.getElementById("R").innerHTML= "invalid sign";
+}
+}
+
+</script>
+
+<body>
+
+<h2>MY CALCULATOR</h2>
+<form>
+
+<label>NUMBER 1:</label>
+<input type="number" id="num1" name="num1">
+<br>
+<br>
+<label >SYMBOL:</label>
+<input type="text" id="sym" name="sym">
+<br>
+<br>
+<label>NUMBER 2:</label>
+<input type="number" id="num2" name="num2">
+<br>
+<br>
+
+<input  type="button" value="Calculate" onclick="cal()">
+<input type="text" id="rslt">
+</form>
+
+<p id="R"></p>
+
+</body>
+
+</html>
